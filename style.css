@@ -1,0 +1,242 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --strong-cyan:hsl(172, 67%, 45%);
+    --very-dark-cyan:hsl(183, 100%, 15%);
+    --dark-grayish-cyan:hsl(186, 14%, 43%);
+    --grayis-cyan:hsl(184, 14%, 56%);
+    --light-grayish-cyan:hsl(185, 41%, 84%);
+    --very-light-cyan:hsl(189, 41%, 97%);
+    --hover-cyan:#9FE8DF;
+    --white:hsl(0, 0%, 100%);
+}
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-grayish-cyan);
+    font-family: 'Space Mono', monospace;
+    font-size:24px;
+   
+}
+
+.logo{
+    margin:8% 0 5% 0;
+    
+}
+
+.container{
+    display:flex;
+    justify-content: center;
+    width:920px;
+    height:481px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding:30px;
+
+}
+/*input side*/
+.input-side{
+    width:50%;
+    margin-right:30px;
+    padding:2%;
+    color:var(--very-dark-cyan);
+    font-size:.7em;
+    color: var(--dark-grayish-cyan);
+    
+}
+
+.input-field{
+    font-family: 'Space Mono', monospace;
+    font-size:1.5em;
+    width:100%;
+    background-color: var(--very-light-cyan);
+    border:none;
+    border-radius: 5px;
+    padding:10px;
+    text-align: right;
+    color:var(--very-dark-cyan);
+    margin:10px 0 25px 0;
+}
+
+.input-field::placeholder{
+    color:var(--dark-grayish-cyan);
+}
+
+.input-field:focus{
+    cursor: pointer;
+    outline-color:var(--strong-cyan);
+
+}
+
+.input-field:hover{
+    cursor: pointer;
+    outline-color:var(--strong-cyan);
+}
+
+.input-container i{
+    position:absolute;
+}
+
+.icon{
+    text-align: left;
+    padding:28px;
+    font-size: 1.2em;
+}
+
+.tip-container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tip{
+    font-family: 'Space Mono', monospace;
+    font-size:1.5em;
+    color:var(--white);
+    background-color: var(--very-dark-cyan);
+    border:none;
+    border-radius: 5px;;
+    width:31%;
+    padding:1.5%;
+    margin:10px 3px;
+}
+
+.active, .t-btn:hover{
+    cursor: pointer;
+    background-color: var(--hover-cyan);
+    color:var(--very-dark-cyan);
+}
+
+.custom{
+    background-color: var(--very-light-cyan);
+    text-align: right;
+    color:var(--very-dark-cyan)
+}
+
+.custom::placeholder{
+    color: var(--dark-grayish-cyan);
+    text-align: center;
+}
+
+.custom:focus{
+    cursor: pointer;
+    outline-color: var(--strong-cyan);
+}
+
+.err-msg{
+    color:#E17052;
+    float:right;
+    display:none;
+}
+
+.error:focus{
+    outline-color:#E17052;
+    border-radius:5px;
+}
+
+
+/*result side*/
+.result-side{
+    display:flex;
+    width:50%;
+    background-color: var(--very-dark-cyan);
+    border-radius: 20px;
+    padding:40px;
+    color:var(--white);
+    flex-direction: column;
+    
+}
+.wrap-title{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:9%;
+}
+
+.first-row{
+    font-weight:lighter;
+    font-size:.65em;
+}
+
+.second-row{
+    font-size:.8em;
+    color: var(--dark-grayish-cyan);
+}
+
+.reset-btn{
+    font-family: 'Space Mono', monospace;
+    font-size:1em;
+    color:var(--very-dark-cyan);
+    width:100%;
+    margin-top:auto;
+    padding:2%;
+    background-color: var(--strong-cyan);
+    border:none;
+    border-radius: 5px;
+    
+}
+
+
+
+.results{
+    color: var(--strong-cyan);
+}
+
+.reset-btn:hover{
+    cursor: pointer;
+    background-color: var(--hover-cyan);
+}
+.reset-btn.disabled{
+    pointer-events: none;
+    opacity:0.2;
+}
+
+/*footer*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top:auto; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*responsive*/
+
+@media (max-width: 940px){
+    .logo{
+        display:block;
+        position:absolute;
+    }
+    
+    
+    .container{
+        flex-direction: column;
+        height:auto;
+        padding:2%;
+        width:90%;
+        margin-top:30%;
+        margin-bottom:10%;
+    }
+
+    .input-side{
+        width:100%;
+    }
+
+    .result-side{
+        width:100%;
+    }
+
+    .tip{
+        width:45%;
+    }
+}
