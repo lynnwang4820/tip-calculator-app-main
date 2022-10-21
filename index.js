@@ -1,13 +1,3 @@
-//when number of people is 0
-// let numberOfPeople = document.getElementById("numOfPeople").value;
-// let peopleInputfield = document.getElementById("numOfPeople");''
-
-// if(numberOfPeople === 0){
-//     peopleInputfield.classList.add("error");
-// }
-// else if(numberOfPeople !== 0 && peopleInputfield.classList.contains("error")){
-//     peopleInputfield.classList.remove("error");
-// }
 
 let bill = document.getElementById("bill");
 let billValue = bill.value;
